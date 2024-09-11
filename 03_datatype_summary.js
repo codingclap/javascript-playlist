@@ -46,26 +46,29 @@ let myFunction = function(){
 
 //---------------------------  Memory Type ---------------------------------
 
-// Stack Memory (Primitive)
+/*##########################
+   Stack Memory (Primitive)
+############################*/
 
 let myRecord = "This is my record!"
 
 let newRecord = myRecord;
 newRecord = "This is a latest record!";
 
-
 //console.log(myRecord)              // Return original records [ Because stack provide duplicated copy 
 //console.log(newRecord)             // Return updated records   So that the original value not changed ]
 
 
-//  Heap (Non-primitive)
+
+/*##########################
+  Heap (Non-primitive)
+############################*/
 
 let myNewObj = {
     name : 'anuj kumar',
     age : 34,
     Designation: 'Project Manager, Lead web-developer'
 }
-
 
 let myNewObj2 = myNewObj
 
