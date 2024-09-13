@@ -8,15 +8,20 @@ const age = 23
 
 const gamename = new String("  Anuj kumar   ");
 
-console.log(`String is a ${typeof gamename}`)
-//console.log(`Game Name = ${gamename}`);
+console.log(typeof String)                              // String is a Function 
+console.log(typeof Number)                               // Number is a Function             
 
+console.log(`String is a ${typeof gamename}`)             // It's return an object 
+
+
+//console.log(`Game Name = ${gamename}`);
 //console.log(gamename.length);                     // To find the length of string
 //console.log(gamename.toUpperCase());              // Canvert to the uppercase
 //console.log(gamename.charAt(2));                  // return character from 2nd position 
 //console.log(gamename.indexOf('r'));               // return index of [r] character 
  
 //console.log(`Remove space := ${secondString.trim()} `);         // Remove space from string
+
 
 let url = "https://www.github%20com";
 console.log(`Url: ${url}`)

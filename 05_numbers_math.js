@@ -1,5 +1,6 @@
-let score = 375;                             
+let score = 375;   
 
+console.log(typeof String)                              // String is a Function [Function: String]
 console.log(typeof Number);                            // Number is a Function [Function: Number]     
             
 let newScore = new Number("500");                    // return value with Number Datatype and 
