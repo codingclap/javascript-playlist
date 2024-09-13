@@ -1,11 +1,14 @@
 let score = 375;                             
 
-//console.log(Number);                            // Number is a Function [Function: Number]     
+console.log(typeof Number);                            // Number is a Function [Function: Number]     
+            
+let newScore = new Number("500");                    // return value with Number Datatype and 
 
-let newScore = new Number("500");         // return value with proper Datatype
- 
+console.log(typeof newScore);                         // It's return a object
+
 //console.log(newScore.toString().length);      // converted into string and can get the length of string
 //console.log(newScore.toFixed('2'));            // To fixed the digit count after decemal ( Ex: 200.00)
+
 
 let rent = 199.555; 
 //console.log(rent.toPrecision(3))                // It round of the number after decemal (199.555  To  200)   
