@@ -8,6 +8,7 @@ const age = 23
 
 const gamename = new String("  Anuj kumar   ");
 
+console.log(`String is a ${typeof gamename}`)
 //console.log(`Game Name = ${gamename}`);
 
 //console.log(gamename.length);                     // To find the length of string
@@ -24,4 +25,4 @@ console.log(url.replace('%20','-'))                       // Replace the string 
 
 //console.log(url.includes('github'));                      // Check if the string include on a URL
 
-console.log(url.slice('.'));
+console.log(url.slice(3,15));                                // Cut-down and return string in-between 3rd position to 15th position]
