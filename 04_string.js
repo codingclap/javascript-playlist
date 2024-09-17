@@ -31,3 +31,12 @@ console.log(url.replace('%20','-'))                       // Replace the string 
 //console.log(url.includes('github'));                      // Check if the string include on a URL
 
 console.log(url.slice(3,15));                                // Cut-down and return string in-between 3rd position to 15th position]
+
+
+
+//  +++++++++++++++   Four way to convert number into a string  ++++++++++++++++
+
+//toString(num)
+//new String(num)
+//`${num}`
+//JSON.stringift(num)
