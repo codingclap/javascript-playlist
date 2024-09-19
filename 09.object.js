@@ -1,5 +1,6 @@
 // Singleton
-Object.create 
+ const singlObj = new Object();
+ console.log(`Singleton object = ${singlObj}`) 
 
 
 // Object Literals
