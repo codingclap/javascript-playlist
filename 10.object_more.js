@@ -47,7 +47,7 @@ let arrObj = [
     {
         name: "sandeep Kaushik",
         age: 43,
-        isLoggedIn: false
+        isLoggedIn: true
     },
     {
         name: "Mandeep Sharma",
@@ -56,6 +56,32 @@ let arrObj = [
     }
 ]
  
-console.log(Object.keys(arrObj));
-console.log(Object.values(arrObj));
+//console.log(arrObj[0].name);
+//console.log(Object.keys(arrObj));              // Return Keys only
+// console.log(arrObj.values(arrObj));           // Return Values with iterable loop
+
+//console.log(arrObj[0].hasOwnProperty('isLoggedIn'))   // true if found
  
+
+//+++++++++++++++++++++++++ Object de-structure ++++++++++++++++++++++++++++++++++++++
+
+let studentRecord = {
+    student_name :'anil mmannu',
+    student_age : 22,
+    student_class : '2nd grade'
+}
+
+// Longer method to access
+//console.log(studentRecord.student_age);            // Access object property
+
+
+// (De- Structure) Sort method to access
+let {student_name, student_age, student_class} = studentRecord;                      
+
+console.log(`My name is a ${student_name} and i am a ${student_age} and study in a ${student_class}`);   
+
+// (De- Structure) Sort method to access ( Sort a student_name with stu_nam )
+let {student_name:stu_nam, student_age:stu_age, student_class:stu_class} = studentRecord;                      
+console.log(`My name is a ${stu_nam} and i am a ${stu_age} and study in a ${stu_class}`);   
+
+
