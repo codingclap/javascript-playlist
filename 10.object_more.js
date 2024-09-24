@@ -56,4 +56,6 @@ let arrObj = [
     }
 ]
  
-console.log(arrObj);
+console.log(Object.keys(arrObj));
+console.log(Object.values(arrObj));
+ 
