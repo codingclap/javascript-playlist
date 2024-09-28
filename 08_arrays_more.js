@@ -96,7 +96,7 @@ for (let chars in sortChar) {
 
 //++++++++++++++++++++++++   (De- Structure) +++++++++++++++++++++++
 
-// (De- Structure) Sort the array property name 
+// (De- Structure) unpack values from arrays, and objects, into distinct variables. 
 
 let fruits = ['mangoman', 'antman', 'madamweb']
 

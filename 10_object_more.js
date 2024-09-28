@@ -74,9 +74,12 @@ let studentRecord = {
 // Longer method to access
 //console.log(studentRecord.student_age);            // Access object property
 
-//++++++++++++++++++++++++   (De- Structure) +++++++++++++++++++++++
 
-// (De- Structure) Sort the object property name and skip the repeatation of object name 
+
+//++++++++++++++++++++++++   (De- Structure)  +++++++++++++++++++++++++
+
+//(De- Structure) unpack values from arrays, and objects, into distinct variables. 
+
 let {student_name, student_age, student_class} = studentRecord;                      
 
 console.log(`My name is a ${student_name} and i am a ${student_age} and study in a ${student_class}`);   
