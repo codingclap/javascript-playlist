@@ -22,10 +22,10 @@ console.log(getRatius(200, 100))
 
 //------------------ 3) Function Constructor --------------------------------
 
-const getRatius = function(width, height){
+ 
 const sum = new Function('a', 'b', 'return a + b');
 
-//console.log(sum(2, 6));
+console.log(sum(2, 6));
 // Expected output: 8
 
 
@@ -81,3 +81,5 @@ const userRecd = {
     age: 34
 }
 receiveArray(userRecd);
+
+

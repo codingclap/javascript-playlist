@@ -90,4 +90,16 @@ for (let chars in sortChar) {
         sortTeacher.push(`${sortChar[chars]}${chars}`)
     }
 }
-console.log(sortTeacher)          // Output: ['6A', '2B','3C', '1c','1D', '3E','5F']
+//console.log(sortTeacher)          // Output: ['6A', '2B','3C', '1c','1D', '3E','5F']
+
+
+
+//++++++++++++++++++++++++   (De- Structure) +++++++++++++++++++++++
+
+// (De- Structure) Sort the array property name 
+
+let fruits = ['mangoman', 'antman', 'madamweb']
+
+let [array1, array2, array3] = fruits;
+
+console.log(`${array1}, ${array2}, ${array3}`)
