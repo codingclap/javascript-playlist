@@ -115,7 +115,7 @@ for (const child in childName) {
     if (childName[child] == " ") { 
         continue
     }
-    console.log(childName[child])
+    //console.log(childName[child])
 }
 
 //--------
@@ -124,4 +124,30 @@ let pocorn = ['name', 'anuj', 'age', 'position', 'inspector']
 for (const value in pocorn) {
     // console.log(`${pocorn[value]}`);
 }
+//--------
 
+
+//++++++++++++++++++++++++   ForEach - loop  +++++++++++++++++++++
+
+const breads = ['lime','Super', 'kuldtyes', 'nobos']
+
+//(1)  -  Throught [Simple Function]
+breads.forEach( function(record){
+    //console.log(`Throught simple Function:- ${record}`)
+})
+
+
+//(2)  -  Throught [Array Function]
+
+breads.forEach( (data) =>{
+    //console.log(`Throught Array Function:- ${data}`)
+})
+
+
+//(3)  -  Throught [Function Passing]
+
+breads.forEach(breadFind)
+
+function breadFind(item,index,array){
+    console.log(`Value of index-${index} is (${item}) and Original Array = ${array}`)
+}
