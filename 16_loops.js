@@ -112,7 +112,7 @@ for (const [fruit_ind] in fruitName) {
 
 let childName = "Divisha Adhana and Aaradhya Adhana"
 for (const child in childName) {
-    if (childName[child] == " ") { 
+    if (childName[child] == " ") {
         continue
     }
     //console.log(childName[child])
@@ -128,18 +128,20 @@ for (const value in pocorn) {
 
 
 //++++++++++++++++++++++++   ForEach - loop  +++++++++++++++++++++
+// forEach Never Return any values
 
-const breads = ['lime','Super', 'kuldtyes', 'nobos']
+
+const breads = ['lime', 'Super', 'kuldtyes', 'nobos']
 
 //(1)  -  Throught [Simple Function]
-breads.forEach( function(record){
+breads.forEach(function (record) {
     //console.log(`Throught simple Function:- ${record}`)
 })
 
 
 //(2)  -  Throught [Array Function]
 
-breads.forEach( (data) =>{
+breads.forEach((data) => {
     //console.log(`Throught Array Function:- ${data}`)
 })
 
@@ -148,7 +150,7 @@ breads.forEach( (data) =>{
 
 breads.forEach(breadFind)
 
-function breadFind(item,index,array){
+function breadFind(item, index, array) {
     //console.log(`Value of index-${index} is (${item}) and Original Array = ${array}`)
 }
 
@@ -173,6 +175,44 @@ const myRecords = [
     }
 ]
 
-myRecords.forEach( (empVal) => {
-    console.log(`Employee of id no. ${empVal.EmployeeId} and which Name is ${empVal.EmplloyeeName}`)
+myRecords.forEach((empVal) => {
+    //console.log(`Employee of id no. ${empVal.EmployeeId} and which Name is ${empVal.EmplloyeeName}`)
 })
+
+
+//--------- Foreach Can't Return
+
+//Collect the Numbers from Cold-Drinks Array
+let coldDrinks = ['coco-cola', 'pepsi', 202, 'limca', 889, 'Mirinda', 909]
+
+let nums = []
+let finalCold = coldDrinks.forEach((item) => {
+    if (isNaN(item)) {
+        //console.log(`Our Final Cold-Drinks are = ${item}`);      //  Works
+    } else {
+
+        //return item                                           // We Can't Return throught forEach Loop Explicitly or Implicitly
+
+        nums.push(item);                                        // We use a array for capuring Number value from array
+    }
+})
+
+//console.log(finalCold)                                  //  Output: Undefined
+
+
+
+//----------- Filter Method has a Return Type
+
+//Collect the Numbers from Cold-Coffee Array
+let coldCoffee = ['coco-cola', 'pepsi', 202, 'limca', 889, 'Mirinda', 909]
+
+let finalCoffee = coldCoffee.filter((items) => {
+    if (isNaN(items)) {
+        console.log(`Our Final Cold-Coffee are = ${items}`);      //  Works
+    } else {
+        return items                                           // We Can't Return throught forEach Loop Explicitly or Implicitly 
+    }
+
+})
+
+console.log(finalCoffee)                                // Output: [ 202, 889, 909 ]         
