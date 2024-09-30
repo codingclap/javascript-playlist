@@ -1,9 +1,11 @@
-// For Loop
-let hero = ['flash','anuj','batman','superman'];
+//++++++++++++++++++ Loop  ++++++++++++++++++++++++
 
-for(let i=0; i<= hero.length; i++){
-   
-    if(hero[i] == 'anuj'){
+//(1) For Loop
+let hero = ['flash', 'anuj', 'batman', 'superman'];
+
+for (let i = 0; i <= hero.length; i++) {
+
+    if (hero[i] == 'anuj') {
         //console.log(`${hero[i]} is not a hero. He is a superhero`)
     }
     //console.log(i)
@@ -11,23 +13,23 @@ for(let i=0; i<= hero.length; i++){
 
 //++++++++++++++++++++++ Break and Continue +++++++++++++++++++++++++
 
-//Break
-for(let i=0; i<= 10; i++){
-   
-    if(i == 5){
-     //console.log(`No ${i} is found! Now you can exit`)
-     break;
-    } 
+//(1) Break
+for (let i = 0; i <= 10; i++) {
+
+    if (i == 5) {
+        //console.log(`No ${i} is found! Now you can exit`)
+        break;
+    }
     //console.log(`Value =  ${i}`)
 }
 
 
-//Continue
-for(let j=0; j<= 10; j++){
-    
-    if(j == 5){
-     //console.log(`No ${j} is found! Now you can continue`)
-     continue;
+//(2) Continue
+for (let j = 0; j <= 10; j++) {
+
+    if (j == 5) {
+        //console.log(`No ${j} is found! Now you can continue`)
+        continue;
     }
 
     //console.log(`Value =  ${j}`)
@@ -35,51 +37,53 @@ for(let j=0; j<= 10; j++){
 
 //++++++++++++++++++++++ While and Do-While +++++++++++++++++++++++++
 
-//While
+//(1) While
 
 let bee = ['honey', 'singh', 'mangoli', 'pushpa']
 
 let p = 0
-while(p <= 3){
-   // console.log(`The Bee name is ${bee[p]}`);
+while (p <= 3) {
+    // console.log(`The Bee name is ${bee[p]}`);
     p = p + 1;
 }
 
 
 
-//Do-While
+//(2) Do-While
 
 let dogBread = ['bull dog', 'pushta', 'Juely', 'german Shepherd']
 
 let d = 4
-do{
+do {
     //console.log(`The Dog Bread no ${d} ${dogBread[d]}`);
     d++;
-}while(d <= 3);
+} while (d <= 3);
 
 
 
 
-//++++++++++++++++++++++++   For - of, in loop ++++++++++++++++
+//++++++++++++++++++++++++   For (of) - loop ++++++++++++++++
 
 //(1) For [of] Loop  - Return the Values
 
 let greeting = [2, 4, 8, 12, 16, 18, 20]
-for(const greet of greeting){
+for (const greet of greeting) {
     //console.log(greet);                     //output: 2,4,8,12,16,18,20
 }
 
 
 let userName = "Anuj Kumar"
-for(const user of userName){
-    if(user == " "){
+for (const user of userName) {
+    if (user == " ") {
         continue                           // Continue Remove the empty space ( skip the current iteration)
     }
     //console.log(user);                     //output: a n u j k u m a r
 }
 
 
-// let fruitName = {                      // For [of] Loop not works on objects
+// For [of] Loop not works on objects
+
+// let fruitName = {                      
 //     'fruit' : "mango",
 //     'color' : 'orange',
 //     'price' : '90/Kg'
@@ -90,22 +94,34 @@ for(const user of userName){
 // }
 
 
+//++++++++++++++++++++++++   For (in) - loop +++++++++++++++++++++
 
 //(2) For [in] Loop  - Return the index
 
 let fruitName = {
-    'fruit' : "mango",
-    'color' : 'orange',
-    'price' : '90/Kg'
+    'fruit': "mango",
+    'color': 'orange',
+    'price': '90/Kg'
 }
 
-for(const fruit_ind in fruitName){
-    console.log(`Fruit value is ${fruitName[fruit_ind]} and located on index ${fruit_ind}`);
+for (const [fruit_ind] in fruitName) {
+    //console.log(`Fruit value is ${fruitName[fruit_ind]} and located on index ${fruit_ind}`);
 }
 
+//--------
 
-// Map Object
+let childName = "Divisha Adhana and Aaradhya Adhana"
+for (const child in childName) {
+    if (childName[child] == " ") { 
+        continue
+    }
+    console.log(childName[child])
+}
 
-let animal =  new Map()
+//--------
 
-console.log(typeof animal);
+let pocorn = ['name', 'anuj', 'age', 'position', 'inspector']
+for (const value in pocorn) {
+    // console.log(`${pocorn[value]}`);
+}
+
