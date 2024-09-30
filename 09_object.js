@@ -1,9 +1,16 @@
-// Singleton
+ 
+/*******************************************************************************************************************
+                                                    Singleton - Objects
+*******************************************************************************************************************/
+
  const singlObj = new Object();
  console.log(`Singleton object = ${singlObj}`) 
 
 
-// Object Literals
+ 
+/*******************************************************************************************************************
+                                                    Object Literals
+*******************************************************************************************************************/
 
 const mySymb = Symbol('new post');
 const userRecord = {
@@ -22,8 +29,8 @@ const userRecord = {
 // console.log(userRecord['password']());
 // console.log(userRecord['name']);
 
-// modify the name
 
+// modify the name
 userRecord['name'] = 'anuj adhana'
 //Object.freeze(userRecord);
 userRecord['name'] = 'sandeep kumar'

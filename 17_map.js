@@ -1,7 +1,10 @@
-// Maps
+/*******************************************************************************************************************
+                                                          Maps
+*******************************************************************************************************************/
+ 
 
-const puppy = new Map();
-//console.log(typeof puppy);        // It's a Object
+const puppy = new Map();               // It's a Object
+//console.log(typeof puppy);           // It's a Object
 
 
 puppy.set('DogName', 'newDog')

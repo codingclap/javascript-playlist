@@ -1,9 +1,13 @@
 let hero_one = ['spiderman', 'batman', 'superman']
 let hero_two = ['mangoman', 'antman', 'madamweb']
 
-// +++++++++++++  Push and concat Method ++++++++++
+
+/*******************************************************************************************************************
+                                                   Push and concat Method 
+*******************************************************************************************************************/
 
 //hero_one.push(hero_two);                       // Push add a second array into first one
+
 let all_hero2 = hero_one.concat(hero_two);     // Concat combine two array and return a new array
 
 //console.log(hero_one)     
@@ -16,7 +20,6 @@ let all_hero3 = [...hero_one, ...hero_two];     // spread operator return new ar
 //console.log(all_hero3) 
 
 
-
 // ++++++++++++ Flat +++++++++++++++
 
 let india = ['people', 'summery', [12, 33, 55,], ['manoj', 'sandeep', [1991, 2024, 1023]]]
@@ -26,8 +29,9 @@ let newIndaia = india.flat(2)         // Return a new array with all the nested 
 //console.log(newIndaia);
 
 
-//  +++++++++++++++++ isArray, from and of ++++++++++++++++++
-
+/*******************************************************************************************************************
+                                                   isArray, from and of
+*******************************************************************************************************************/
 
 let newPop = "anuj kumar";
 
@@ -51,7 +55,9 @@ let newPony = Array.of(ponyTail1, ponyTail2, ponyTail3);  // Convert string, num
 
 
 
-//++++++++++++++++++++++++++++++  Examples ++++++++++++++++++++++++++++++++
+/*******************************************************************************************************************
+                                                   Examples
+*******************************************************************************************************************/
 
 let student = "AAABBCCCDEEEFFFFF";
 
@@ -94,7 +100,9 @@ for (let chars in sortChar) {
 
 
 
-//++++++++++++++++++++++++   (De- Structure) +++++++++++++++++++++++
+/*******************************************************************************************************************
+                                                   (De- Structure)
+*******************************************************************************************************************/
 
 // (De- Structure) unpack values from arrays, and objects, into distinct variables. 
 

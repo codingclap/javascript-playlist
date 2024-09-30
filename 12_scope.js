@@ -8,8 +8,11 @@
 // console.log(b);           // error: b is not defined  ||  Its has Block scope  
 // console.log(c);           // error: c is not defined  ||  Its has Block scope 
 
-//+++++++++++++++++++++++++++++   Nested Fuction Scope ++++++++++++++++++++++++++
 
+
+/*******************************************************************************************************************
+                                                    Nested Fuction Scope
+*******************************************************************************************************************/
 
 function primary(){
 
@@ -29,10 +32,11 @@ function primary(){
 primary()
 
 
+/*******************************************************************************************************************
+                                                     Hoisting
+*******************************************************************************************************************/
 
-//++++++++++++++++++++++++++++++   Hoisting   ++++++++++++++++++
-
-// Function Declaration
+//------ Function Declaration
 
 firstPerson()                                        // Output: You called a Second Person
 
@@ -44,7 +48,7 @@ function firstPerson(){
 
 
 
-// Function Expression
+//------ Function Expression
 
 //secondPerson()                                     //Cannot access 'secondPerson' before initialization
 
@@ -52,4 +56,11 @@ const secondPerson = function(){
     console.log('You called a Second Person')
 }
 
-secondPerson()                                         // Output: You called a Second Person
+
+//------- Arrow Function
+
+thirdPerson('Third')                                     //Cannot access 'thirdPerson' before initialization
+
+const thirdPerson = ((val)=> {
+    console.log(`You called a ${val} Person`)           //Output: You called a Third Person
+}) 

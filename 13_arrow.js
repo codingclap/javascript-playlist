@@ -1,4 +1,6 @@
-//++++++++++++++++++++++  This Keyword +++++++++++++++++++++
+/*******************************************************************************************************************
+                                               This - Keyword
+*******************************************************************************************************************/ 
 // This keyword return the current context of the current environment  
 //-> If this keyword are used in a browser environment then its will return window object
 //-> If this keyword are used in a node environment then its will return empty object{} 
@@ -22,7 +24,9 @@ myObj.name = "manoj tripathi"
 myObj.project()
 
 
-//+++++++++++++++++++++++++  Access (This) inside Functions +++++++++++++++++++
+/*******************************************************************************************************************
+                                                Access (This) inside Functions
+*******************************************************************************************************************/ 
 //-> This keyword can only works/access object property not function
 
 //Ex: 1
@@ -44,7 +48,9 @@ let demo2 = function(){
 //Output: undefined
 
 
-//+++++++++++++++++++++++  Arrow Function ( Explicit and Implicit Return )
+/*******************************************************************************************************************
+                                                     Arrow Function ( Explicit and Implicit Return )
+*******************************************************************************************************************/
  
 let arrowFunOne = (width, height) => {
       return width * height                   // Explicit Return

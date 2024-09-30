@@ -1,6 +1,10 @@
-//++++++++++++++++++ Loop  ++++++++++++++++++++++++
+/*******************************************************************************************************************
+                                                   Loops
+*******************************************************************************************************************/
 
-//(1) For Loop
+/*(1)  For Loop
+-------------------*/
+
 let hero = ['flash', 'anuj', 'batman', 'superman'];
 
 for (let i = 0; i <= hero.length; i++) {
@@ -11,33 +15,9 @@ for (let i = 0; i <= hero.length; i++) {
     //console.log(i)
 }
 
-//++++++++++++++++++++++ Break and Continue +++++++++++++++++++++++++
-
-//(1) Break
-for (let i = 0; i <= 10; i++) {
-
-    if (i == 5) {
-        //console.log(`No ${i} is found! Now you can exit`)
-        break;
-    }
-    //console.log(`Value =  ${i}`)
-}
-
-
-//(2) Continue
-for (let j = 0; j <= 10; j++) {
-
-    if (j == 5) {
-        //console.log(`No ${j} is found! Now you can continue`)
-        continue;
-    }
-
-    //console.log(`Value =  ${j}`)
-}
-
-//++++++++++++++++++++++ While and Do-While +++++++++++++++++++++++++
-
-//(1) While
+ 
+/*(2)  While Loop
+----------------------*/
 
 let bee = ['honey', 'singh', 'mangoli', 'pushpa']
 
@@ -49,7 +29,9 @@ while (p <= 3) {
 
 
 
-//(2) Do-While
+/*(3)  Do-While Loop
+------------------------*/
+ 
 
 let dogBread = ['bull dog', 'pushta', 'Juely', 'german Shepherd']
 
@@ -61,10 +43,38 @@ do {
 
 
 
+//++++++++++++++++++++++ USe of ( Break and Continue ) +++++++++++++++++++++++++
 
-//++++++++++++++++++++++++   For (of) - loop ++++++++++++++++
+//-------- Break
+for (let i = 0; i <= 10; i++) {
 
-//(1) For [of] Loop  - Return the Values
+    if (i == 5) {
+        //console.log(`No ${i} is found! Now you can exit`)
+        break;
+    }
+    //console.log(`Value =  ${i}`)
+}
+
+
+//-------- Continue
+for (let j = 0; j <= 10; j++) {
+
+    if (j == 5) {
+        //console.log(`No ${j} is found! Now you can continue`)
+        continue;
+    }
+
+    //console.log(`Value =  ${j}`)
+}
+
+
+
+/*******************************************************************************************************************
+                                                   For (of) - loop 
+*******************************************************************************************************************/
+
+/*(1) For [of] Loop  - Return the Values
+-------------------------------------------*/
 
 let greeting = [2, 4, 8, 12, 16, 18, 20]
 for (const greet of greeting) {
@@ -94,10 +104,13 @@ for (const user of userName) {
 // }
 
 
-//++++++++++++++++++++++++   For (in) - loop +++++++++++++++++++++
+/*******************************************************************************************************************
+                                                   For (in) - loop 
+*******************************************************************************************************************/
 
-//(2) For [in] Loop  - Return the index
-
+/*(2)   For [in] Loop  - Return the index
+-------------------------------------------*/
+ 
 let fruitName = {
     'fruit': "mango",
     'color': 'orange',
@@ -127,26 +140,32 @@ for (const value in pocorn) {
 //--------
 
 
-//++++++++++++++++++++++++   ForEach - loop  +++++++++++++++++++++
+/*******************************************************************************************************************
+                                                   ForEach - loop (Can't Return the Values)
+*******************************************************************************************************************/
 // forEach Never Return any values
 
 
 const breads = ['lime', 'Super', 'kuldtyes', 'nobos']
 
-//(1)  -  Throught [Simple Function]
+/*(1) Accessing Object  - Throught [Simple Function]
+--------------------------------------------------------*/
+
 breads.forEach(function (record) {
     //console.log(`Throught simple Function:- ${record}`)
 })
 
 
-//(2)  -  Throught [Array Function]
-
+/*(2) Accessing Object  - Throught [Arrow Function]
+--------------------------------------------------------*/
+ 
 breads.forEach((data) => {
     //console.log(`Throught Array Function:- ${data}`)
 })
 
 
-//(3)  -  Throught [Function Passing]
+/*(3) Accessing Object  - Throught [Function Passing]
+--------------------------------------------------------*/
 
 breads.forEach(breadFind)
 
@@ -155,8 +174,9 @@ function breadFind(item, index, array) {
 }
 
 
-//++++++++++++++++++++  Accessing Object Throught - forEach Loop ++++++++++++++++++++
-
+/*(4) Accessing Object  - forEach Loop
+-------------------------------------------*/
+ 
 const myRecords = [
     {
         EmplloyeeName: 'Anuj kumar',
@@ -180,7 +200,10 @@ myRecords.forEach((empVal) => {
 })
 
 
-//--------- Foreach Can't Return
+//+++++++++++++++++++++++++ ForEach - Return Type +++++++++++++++++++++++
+
+/*    Foreach Can't Return
+------------------------------*/
 
 //Collect the Numbers from Cold-Drinks Array
 let coldDrinks = ['coco-cola', 'pepsi', 202, 'limca', 889, 'Mirinda', 909]
@@ -200,8 +223,10 @@ let finalCold = coldDrinks.forEach((item) => {
 //console.log(finalCold)                                  //  Output: Undefined
 
 
-
-//----------- Filter Method has a Return Type
+/*******************************************************************************************************************
+                                                   filter Method (Can Return the Values)
+*******************************************************************************************************************/
+ 
 
 //Collect the Numbers from Cold-Coffee Array
 let coldCoffee = ['coco-cola', 'pepsi', 202, 'limca', 889, 'Mirinda', 909]
