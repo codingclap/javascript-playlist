@@ -103,6 +103,15 @@ for (const user of userName) {
 //     console.log(fruit);
 // }
 
+let pizza = new Map();
+pizza.set('name', "mango")
+pizza.set('Cream', "orange")
+pizza.set('Sosage', "spicy")
+ console.log(pizza)
+for (const [index, val] of pizza) {                  // De-Structuring the object
+    console.log(`${index}:- ${val}`)
+}
+
 
 /*******************************************************************************************************************
                                                    For (in) - loop 
@@ -148,7 +157,7 @@ for (const value in pocorn) {
 
 const breads = ['lime', 'Super', 'kuldtyes', 'nobos']
 
-/*(1) Accessing Object  - Throught [Simple Function]
+/*(1) forEach Loop - Throught [Simple Function]
 --------------------------------------------------------*/
 
 breads.forEach(function (record) {
@@ -156,7 +165,7 @@ breads.forEach(function (record) {
 })
 
 
-/*(2) Accessing Object  - Throught [Arrow Function]
+/*(2) forEach Loop  - Throught [Arrow Function]
 --------------------------------------------------------*/
  
 breads.forEach((data) => {
@@ -164,7 +173,7 @@ breads.forEach((data) => {
 })
 
 
-/*(3) Accessing Object  - Throught [Function Passing]
+/*(3) forEach Loop  - Throught [Function Passing]
 --------------------------------------------------------*/
 
 breads.forEach(breadFind)
@@ -174,8 +183,8 @@ function breadFind(item, index, array) {
 }
 
 
-/*(4) Accessing Object  - forEach Loop
--------------------------------------------*/
+/*(4) forEach Loop  - Throught Array-of-Object
+------------------------------------------------*/
  
 const myRecords = [
     {
@@ -188,21 +197,17 @@ const myRecords = [
         EmployeeId: 44432,
         EmployeeTitle: 'Sr. Software Tester'
     },
-    {
-        EmplloyeeName: 'Pawan kumar',
-        EmployeeId: 22334,
-        EmployeeTitle: 'Sr. SEO Executive'
-    }
 ]
 
 myRecords.forEach((empVal) => {
     //console.log(`Employee of id no. ${empVal.EmployeeId} and which Name is ${empVal.EmplloyeeName}`)
 })
-
+ 
+//------
 
 
 /*******************************************************************************************************************
-                                           ForEach and Filter - Return Type
+                                           ForEach and Filter Mathod - Return Type
 *******************************************************************************************************************/
  
 /*    Foreach Can't Return
