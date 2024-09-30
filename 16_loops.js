@@ -149,5 +149,30 @@ breads.forEach( (data) =>{
 breads.forEach(breadFind)
 
 function breadFind(item,index,array){
-    console.log(`Value of index-${index} is (${item}) and Original Array = ${array}`)
+    //console.log(`Value of index-${index} is (${item}) and Original Array = ${array}`)
 }
+
+
+//++++++++++++++++++++  Accessing Object Throught - forEach Loop ++++++++++++++++++++
+
+const myRecords = [
+    {
+        EmplloyeeName: 'Anuj kumar',
+        EmployeeId: 11233,
+        EmployeeTitle: 'Sr. Developer'
+    },
+    {
+        EmplloyeeName: 'Mannu kumar',
+        EmployeeId: 44432,
+        EmployeeTitle: 'Sr. Software Tester'
+    },
+    {
+        EmplloyeeName: 'Pawan kumar',
+        EmployeeId: 22334,
+        EmployeeTitle: 'Sr. SEO Executive'
+    }
+]
+
+myRecords.forEach( (empVal) => {
+    console.log(`Employee of id no. ${empVal.EmployeeId} and which Name is ${empVal.EmplloyeeName}`)
+})
