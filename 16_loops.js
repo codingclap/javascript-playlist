@@ -169,7 +169,7 @@ breads.forEach(function (record) {
 --------------------------------------------------------*/
  
 breads.forEach((data) => {
-    //console.log(`Throught Array Function:- ${data}`)
+    //console.log(`Throught Arrow Function:- ${data}`)
 })
 
 
@@ -200,7 +200,7 @@ const myRecords = [
 ]
 
 myRecords.forEach((empVal) => {
-    //console.log(`Employee of id no. ${empVal.EmployeeId} and which Name is ${empVal.EmplloyeeName}`)
+    console.log(`Employee of id no. ${empVal.EmployeeId} and which Name is ${empVal.EmplloyeeName}`)
 })
  
 //------
@@ -222,9 +222,9 @@ let finalCold = coldDrinks.forEach((item) => {
         //console.log(`Our Final Cold-Drinks are = ${item}`);      //  Works
     } else {
 
-        //return item                                           // We Can't Return throught forEach Loop Explicitly or Implicitly
+        //return item                                 // We Can't Return throught forEach Loop Explicitly or Implicitly
 
-        nums.push(item);                                        // We use a array for capuring Number value from array
+        nums.push(item);                              // We use a array for capuring Number value from array
     }
 })
 
@@ -240,9 +240,9 @@ let coldCoffee = ['coco-cola', 'pepsi', 202, 'limca', 889, 'Mirinda', 909]
 
 let finalCoffee = coldCoffee.filter((items) => {
     if (isNaN(items)) {
-        console.log(`Our Final Cold-Coffee are = ${items}`);      //  Works
+        console.log(`Our Final Cold-Coffee are = ${items}`);    //  Works
     } else {
-        return items                                           // We Can't Return throught forEach Loop Explicitly or Implicitly 
+        return items                              // We Can't Return throught forEach Loop Explicitly or Implicitly 
     }
 
 })
