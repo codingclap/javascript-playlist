@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+
+    <style>
+        [data-color="red"]{
+            color:red
+        }
+        [data-color="blue"]{
+            color:blue
+        }
+    </style>
+</head>
+<body class="bg-black">
+    
+    <div class="container">
+        <h2 id="title" class="heading">Dom Manipulation with Hitesh</h2>
+        <p>Lorim Ipsum Lorim Ipsum Lorim Ipsum Lorim Ipsum </p>
+        <p>Lorim Ipsum Lorim Ipsum Lorim Ipsum Lorim Ipsum </p>
+        <p>Lorim Ipsum Lorim Ipsum Lorim Ipsum Lorim Ipsum </p>
+
+
+        <ul>
+            <li class="list-item">List 1</li>
+            <li class="list-item">List 2</li>
+            <li class="list-item">List 3</li>
+            <li class="list-item">List 4</li>
+        </ul>
+    </div>
+
+
+    <script>
+        let heading = document.getElementById('title');
+
+        //setAttribute
+        heading.setAttribute('data-color','red')              // <h2 data-color="red">Dom Manipulation with Hitesh</h2> 
+                     
+        //getAttribute
+        let getId = heading.getAttribute('id')               // title
+
+        heading.style.backgroundColor="#222"                 // Styling
+        heading.style.padding="20px"                          // Styling
+        
+
+        /*#########################################
+        ####  Node List (Map, forEach, etc) ) #####
+        #########################################*/
+
+        let allp = document.querySelectorAll('p')            
+        
+        allp.forEach((item, index, arr) => {
+            item.setAttribute('data-color','blue')          // Set blue color to the all p items
+            //console.log(item);
+        })
+       
+
+        /*####################################################
+        ####  HTML Collection (No option for looping) ) ######
+        #####################################################*/ 
+        let allli = document.getElementsByClassName('list-item')  
+
+        let nodeLists = Array.from(allli)      //convert HTMLCollection (any String) to the Node List (Array)
+        console.log(nodeLists)
+
+    </script>
+</body>
+</html>

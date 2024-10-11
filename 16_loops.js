@@ -229,8 +229,7 @@ let finalCold = coldDrinks.forEach((item) => {
 })
 
 //console.log(finalCold)                                  //  Output: Undefined
-
-
+  
 
 /*    Filter Can Return
 ------------------------------*/
@@ -242,7 +241,7 @@ let finalCoffee = coldCoffee.filter((items) => {
     if (isNaN(items)) {
         console.log(`Our Final Cold-Coffee are = ${items}`);    //  Works
     } else {
-        return items                              // We Can't Return throught forEach Loop Explicitly or Implicitly 
+        return items                              
     }
 
 })
