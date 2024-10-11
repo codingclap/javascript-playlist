@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - Create New Element</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+
+    <script>
+
+        let parent = document.querySelector('.parent')
+
+        //console.log(parent)                               // get Parent with Children
+        //console.log(parent.children)                          // Get All Children
+        //console.log(parent.children[1].textContent)            // Get First Child
+
+/*------------------------------------ Display All Children ---------------------------------------------*/
+
+        for(let i =0; i< parent.children.length;i++){
+           // console.log(parent.children[i].innerHTML)          // Get All the Children
+        }
+        
+/*------------------------------  Display First and Last Child --------------------------------------------------*/
+       
+        //console.log(parent.firstElementChild.innerHTML);
+        //console.log(parent.lastElementChild.innerHTML);
+
+/*------------------------------- Get Parent from children -----------------------------------------------*/
+ 
+        let dayOne = document.querySelector('.day');
+        console.log(dayOne.parentElement)
+        console.log(dayOne.nextElementSibling.innerHTML)
+
+/*------------------------------- Get Child Nodes -----------------------------------------------*/
+
+console.log('Nodes:', parent.childNodes)         // Get the Child Nodes with all the spaces and comments
+
+    </script>
+</body>
+
+</html>
