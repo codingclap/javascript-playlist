@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Create Element</title>
+</head>
+<body>
+
+    <ul class="language">
+        <li>Programming Languages:</li>
+    </ul>
+
+    <script>
+
+        /*################  Create Element Using Hard Coded ##################*/
+            let div = document.createElement('div');
+            div.className = "container"
+            div.id = Math.round(Math.random() * 10 + 1)
+            div.setAttribute('title','Hello this is a Division')
+            div.style.backgroundColor="#234"
+            div.style.color="#fff"
+            div.style.padding="20px"
+            // div.innerHTML = "This way we also assign some text to the element"
+            let textContent = document.createTextNode('This is a TextNode')   // Assign a text to the newly created element 
+            div.appendChild(textContent)
+
+            //document.body.appendChild(div);                     //Append New Element to the DOM 
+            
+
+        /*################  Create Element ( Usable Function ) ##################*/
+
+        function newElement(text){
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(text))
+            document.querySelector('.language').appendChild(li)
+        }
+
+        newElement('python')
+        newElement('Javascript')
+        newElement('Php')
+        newElement('React')
+        
+    </script>
+</body>
+</html>
