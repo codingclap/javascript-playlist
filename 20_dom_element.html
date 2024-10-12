@@ -13,7 +13,7 @@
 
     <script>
 
-        /*################  Create Element Using Hard Coded ##################*/
+        /*################  Create Element (Using Hard Coded) ##################*/
             let div = document.createElement('div');
             div.className = "container"
             div.id = Math.round(Math.random() * 10 + 1)
@@ -40,7 +40,22 @@
         newElement('Javascript')
         newElement('Php')
         newElement('React')
-        
+
+
+        /*################  Edit Element ##################*/
+        const secondLang = document.querySelector('li:nth-child(2)');
+        //secondLang.innerHTML= "Next js"
+        let newEle = document.createElement("li")
+        newEle.textContent = "Next Js"
+        secondLang.replaceWith(newEle)
+
+        /*################  Remove Element ##################*/
+
+        const lastLang = document.querySelector('li:last-child')
+        lastLang.remove()                                               // React Removed
+
+
+
     </script>
 </body>
 </html>
