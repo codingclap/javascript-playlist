@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Bubbling | Capturing</title>
+    <style>
+        ul {
+            display: flex;
+            gap: 20px
+        }
+
+        li {
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="img-container">
+        <li><img id="image-1"
+                src="https://t4.ftcdn.net/jpg/08/34/92/15/360_F_834921528_7aNC7SYXNtNRXuKVjX4TinP6jRqACu8I.jpg"
+                alt="Google"></li>
+        <li><img id="image-2" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+                alt="Manfeast"></li>
+        <li><img id="image-3" src="https://img.lovepik.com/photo/48015/7089.jpg_wh860.jpg" alt="Yahoo"></li>
+        <li><img id="image-4" src="https://watermark.lovepik.com/photo/40009/6649.jpg_wh1200.jpg" alt="bubble"></li>
+        <li><img id="image-5" src="https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg" alt="Capture">
+        </li>
+    </ul>
+
+    <script>
+        // type, timestamp, defaultPrevented
+        // target, to Element, srcElement, currentTarget
+        // clientX, clientY, screenX, screenY
+        // altkey, ctrlkey, shiftkey, keyCode
+
+        //######################  Old Approach - Event Propagation #########################
+
+        //    document.getElementById('image-1').onclick = function(){
+        //        alert('old Approach for trigger')
+        //    }
+
+
+        //########################  New Approach - Event Propagation  ##########################
+
+        /*(1) False - Means Bubbling  ||  (2) True - Means Capturing
+        ______________________________________________________________*/
+
+        document.getElementById('img-container').addEventListener('click', function (e) {   //(e) - Event Object
+            // console.log('Clicked Inside Ul')
+        }, false)
+
+        document.getElementById('image-1').addEventListener('click', function (e) {
+            //console.log('Image 1 Clicked')
+        }, false)
+
+        /*                       Output
+        ----------------------------------------------------
+        */
+        // (False- Bubbling):       ||   (True- Capturing):
+        //  Image 1 Clicked         ||    Clicked Inside Ul
+        //  Clicked Inside Ul       ||    Image 1 Clicked 
+
+
+
+        //#######################  Stop - Unwanted (Bubbling and Capture) ###################
+
+        /*  e.preventDefault()  || e.stopPropagation()  
+        _______________________________________________
+        */
+
+        document.getElementById('img-container').addEventListener('click', function (e) {   //(e) - Event Object
+            //console.log('Clicked Inside Ul')
+        }, false)
+
+        document.getElementById('image-2').addEventListener('click', function (e) {
+            //e.preventDefault()
+           // e.stopPropagation()                           //Stop Unwanted Capturing
+            //console.log('Image 2 Clicked')
+        }, false)
+
+
+        //#######################  Remove - Image  ###################
+
+        document.getElementById('img-container').addEventListener('click', function (e) {
+            e.stopPropagation()
+            if(e.target.tagName == 'IMG'){
+                let removeIt = e.target.parentNode;
+                removeIt.remove()                              // First Approach -  Remove Child
+               //removeIt.parentNode.removeChild(removeIt)     // Second Approach -  Remove Child
+            }
+            
+            
+        })
+
+    </script>
+</body>
+
+</html>
