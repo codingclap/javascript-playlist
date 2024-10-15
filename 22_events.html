@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Bubbling | Capturing</title>
+    <title>Events Propagation</title>
     <style>
         ul {
             display: flex;
@@ -38,10 +38,23 @@
     </ul>
 
     <script>
+        /*###################### What is Event Propagation #########################
+
+        ==> Event Propagation - movement of Events through the DOM. 
+            Event Propagation to handle how events travel through the Document Object Model (DOM).  
+            1. Capturing: It's a first Phase Event Propagation and starts from the root of the DOM tree and then moves down towards the target element
+            2. Targeting: This phase starts once the event reaches the element where the event was triggered 
+            3. Bubbling: After targeting, the event traces back its path and moves back up to the root of the DOM. 
+        */
+
+
+        /*######  Some Important Events  ######
         // type, timestamp, defaultPrevented
         // target, to Element, srcElement, currentTarget
         // clientX, clientY, screenX, screenY
         // altkey, ctrlkey, shiftkey, keyCode
+
+
 
         //######################  Old Approach - Event Propagation #########################
 
