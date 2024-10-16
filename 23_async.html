@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynch - Javascript</title>
+</head>
+
+<body id="bgTarget">
+
+    <div style="display:flex;justify-content:center;align-items:center;flex-direction: column;">
+        <h2>Background Color Changing</h2><br>
+        <div class="cta">
+            <button id="start">Start</button> &nbsp; <button id="stop">Stop</button>
+        </div>
+
+    </div>
+
+    <script>
+        const randColor = function () {
+            let hex = '0123456789ABCDEF';
+            let color = '#';
+             
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+        }
+        let intervalId;
+        const startChangingColor = function () {
+           intervalId = setInterval(changeBgcolor, 1000);
+                
+            function changeBgcolor() {
+                document.querySelector('#bgTarget').style.backgroundColor = randColor();
+            }
+        }
+        const stopChangingColor = function () {
+            clearInterval(intervalId)
+        }
+
+        document.querySelector('#start').addEventListener('click', startChangingColor);
+
+        document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+
+
+    </script>
+</body>
+
+</html>
