@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API - Request</title>
+</head>
+<body>
+    
+    
+
+    <script>
+        const requestUrl = 'https://randomuser.me/api/'; 
+        const xhr  = new XMLHttpRequest();
+        xhr.open('GET', requestUrl)
+
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4){
+                let data = JSON.parse(this.responseText);     // JSON.parse - convert string to the Json Object
+                console.log(data.results[0].name.first)
+            }
+        }
+       
+        
+        xhr.send();
+    </script>
+
+</body>
+</html>
