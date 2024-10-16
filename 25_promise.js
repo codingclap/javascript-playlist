@@ -44,18 +44,46 @@ promiseThree.then(function (rec) {
 
 const promiseFour = new Promise((resolve, reject) => {
     let error = false;
-    if (!error) {
-        resolve({ username: 'Deepak kumar', age: 30, status: true })
-    }else{
-        reject('ERROR: Somthing went wrong!')
-    }
+    setTimeout(function () {
+        if (!error) {
+            resolve({ username: 'Deepak kumar', age: 30, status: true })
+        } else {
+            reject('ERROR: Somthing went wrong!')
+        }
+    }, 1000)
 
 })
 
 promiseFour.then((record) => {
     return record.username
-}).then((username)=>{
+}).then((username) => {                         // Callback hell
     console.log(username)
-}).catch((err)=>{
+}).catch((err) => {
     console.log(err)
 })
+
+
+//--------------------------- Example - 5 (async/ await) ----------------------------
+
+promiseFive = new Promise(function (resolve, reject) {
+    let error = false;
+    setTimeout(function () {
+        if (!error) {
+            resolve({ username: 'Manoj kumar', age: 35, status: true })
+        } else {
+            reject('ERROR: Promise Five error!')
+        }
+    }, 1000);
+})
+
+async function consumePromiseFive() {
+    try {
+        const response = await promiseFive
+        console.log(response)
+    } catch (errs) {
+        console.log(errs)
+    }
+
+}
+
+consumePromiseFive()
