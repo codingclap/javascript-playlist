@@ -87,3 +87,32 @@ async function consumePromiseFive() {
 }
 
 consumePromiseFive()
+
+//--------------------------- Example - 6 ( Data Fetch) ----------------------------
+
+//(Option 1)
+async function fetchUser() {
+
+    try {
+        const users = await fetch('https://api.github.com/users/anujadhana');
+        const data = await users.json();                                              // Convert into JSON Format and waiting for the records
+        //console.log(data)
+    } catch (error) {
+        console.log('ERROR: Records Not Found')
+    }
+}
+
+fetchUser();
+
+
+//(Option 2)
+
+fetch('https://api.github.com/users/anujadhana')
+.then((respon)=> {
+     return respon.json();
+}).then((anujRecord)=>{
+    console.log(anujRecord);
+})
+.catch(()=>{
+   console.log('ERROR: Anuj Records not found!') 
+})
