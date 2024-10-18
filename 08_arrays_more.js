@@ -3,21 +3,31 @@ let hero_two = ['mangoman', 'antman', 'madamweb']
 
 
 /*******************************************************************************************************************
-                                                   Push and concat Method 
+                                         Push and concat Method ||  Spread and Rest Operator 
 *******************************************************************************************************************/
 
-//hero_one.push(hero_two);                       // Push add a second array into first one
+// +++++++++++++ Push Method ++++++++++
+hero_one.push(hero_two);                       // Push the second array into first one
+// console.log('Push Array: ',hero_one)        //Ex: [1, 3, 4, [4, 5, 6]]  
 
+
+// +++++++++++++ concat Method ++++++++++
 let all_hero2 = hero_one.concat(hero_two);     // Concat combine two array and return a new array
-
-//console.log(hero_one)     
 //console.log(all_hero2)   
 
 
 // +++++++++++++  Spread operator ++++++++++
-
 let all_hero3 = [...hero_one, ...hero_two];     // spread operator return new array with values of two diffrent array 
 //console.log(all_hero3) 
+
+// +++++++++++++  Rest operator ++++++++++
+function rest(...val) {                           // rest operator puts together individual elements into an array
+    //console.log(val);
+}
+rest()                                    // EX: []
+rest(2)                                   // EX: [2]   
+rest(5, 7, 8)                             // EX: [5, 7, 8] 
+
 
 
 // ++++++++++++ Flat +++++++++++++++
@@ -81,12 +91,12 @@ let sortChar = {};
 
 for (let char of teacher) {
     //console.log(sortChar[char])
-    if(sortChar[char] === undefined){
+    if (sortChar[char] === undefined) {
         sortChar[char] = 1
-    }else{
+    } else {
         sortChar[char] += 1
     }
-    
+
 }
 
 let sortTeacher = [];
@@ -110,4 +120,4 @@ let fruits = ['mangoman', 'antman', 'madamweb']
 
 let [array1, array2, array3] = fruits;
 
-console.log(`${array1}, ${array2}, ${array3}`)
+// console.log(`${array1}, ${array2}, ${array3}`)
