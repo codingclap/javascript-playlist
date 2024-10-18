@@ -221,9 +221,7 @@ let finalCold = coldDrinks.forEach((item) => {
     if (isNaN(item)) {
         //console.log(`Our Final Cold-Drinks are = ${item}`);      //  Works
     } else {
-
         //return item                                 // We Can't Return throught forEach Loop Explicitly or Implicitly
-
         nums.push(item);                              // We use a array for capuring Number value from array
     }
 })
