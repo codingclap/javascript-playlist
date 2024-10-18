@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="display:flex;justify-content: center;margin-top:20px;gap:20px">
+        <button id="green" value="Green">&nbsp; Green &nbsp; </button>
+        <button id="orange" value="Orange">&nbsp; Orange &nbsp; </button>
+        <button id="red" value="red">&nbsp; red &nbsp; </button>
+        <button id="darkgray" value="#234">&nbsp; Dark Gray &nbsp; </button>
+    </div>
+
+
+    <script>
+        //--############ Using Hard Coded ##########
+
+        // document.getElementById('green').onclick = function(){
+        //     document.body.style.backgroundColor = 'green'
+        // }
+
+        // document.getElementById('orange').onclick = function(){
+        //     document.body.style.backgroundColor = 'orange'
+        // }
+
+        //--############  Using Closure ##########
+
+        // Example:1
+        //document.getElementById('green').onclick = bgColorChange('green');
+        //document.getElementById('orange').onclick = bgColorChange('orange');
+        
+        function bgColorChange(color) {
+
+            return function () {
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        // Example:2
+
+        let bttns = document.querySelectorAll('button');
+
+        bttns.forEach(function(val, index){
+            //console.log(index)
+            val.addEventListener('click',bgColorChange(val.value))
+        });
+        
+
+
+    </script>
+
+
+
+
+
+    <script>
+        //##################################  Lexical Scoping ############################
+        // lexical scope is the scope of a variable or function determined at compile time by its physical location in the code
+
+        //Ex - 1
+        function outer() {
+            let name = 'anuj kumar';
+            function inner() {
+                console.log(`Username is = ${name}`);
+            }
+            inner()
+        }
+        outer();
+
+
+        //##################################  Closure ############################
+        // In this case we return the child function with lexical scope of inner and outer function. This is know as closure
+
+        //Ex - 1
+        function makeFun() {
+            let name = 'lexical scope';
+            function makeChild() {
+                console.log(`Closure Example with ${name}`);
+            }
+            return makeChild;
+        }
+
+        const myFun = makeFun();
+        myFun();
+
+    </script>
+
+</body>
+
+</html>
