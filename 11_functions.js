@@ -101,14 +101,23 @@ function myDisplayer(some) {
     console.log(`Callback Output : ${some}`)
 }
 
+// Using Function Expression
 function myCalculator(num1, num2) {
     let sum = num1 + num2;
     return sum;
 }
-
 let result1 = myCalculator(5, 5);
 myDisplayer(result1);
-let result2 = myCalculator(20, 20);
+
+
+
+// Using Arrow Function 
+let allCalculate = (num1, num2) => {
+    let sum = num1 + num2;
+    return sum;
+}
+
+let result2 = allCalculate(20, 20);
 myDisplayer(result2);
 
 //----------------------- Without Callback ---------------------
